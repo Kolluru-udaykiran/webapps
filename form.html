@@ -1,0 +1,41 @@
+
+<html>
+<body bgcolor="#b3ecff">
+<h1 align="center">Form</h1>
+<form id="f1" >
+<table align="center" >
+<tr>
+<td>User name</td>
+<td><input id="text1" type="text"><br/><br/></td>
+</tr>
+<tr>
+<td>Age</td>
+<td><input id="text2" type="text" onfocus="fun1()" onfocusout="fun2()"><br><br></td>
+</tr>
+<tr>
+<td>Father's name</td>
+<td><input id="text3" type="text" ><br><br></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="button" onclick="fun()" value="Login">
+</tr>
+</table>
+
+</body>
+<script>
+function fun()
+{ var val1=document.getElementById("text1").value;
+var val2=document.getElementById("text2").value;
+var val3=document.getElementById("text3").value;
+if(val1=="")
+alert("Name feild should not be empty");
+else if(val2<18 || val2>25)
+alert("Age Should be in 18 to 25")
+else if(val3=="")
+alert("Father's Name feild should not be empty");
+else
+alert("Successfull");
+}
+</script>
+</html>
